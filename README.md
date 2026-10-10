@@ -19,7 +19,7 @@ Multi-center holding risk analysis breaking down category distribution (CAT-S ho
 ![Inventory Risk](03_Inventory_Risk.png)
 
 ### 4. Procurement vs. Consumption Efficiency
-Tracking purchasing trends (€47.45M total purchases across 496 SKUs) against actual consumption rates to prevent stock accumulation.
+Tracking purchasing trends (€47.45M total purchases across 565 SKUs) against actual consumption rates to prevent stock accumulation.
 ![Procurement Analysis](04_Procurement_Analysis.png)
 
 ### 5. Stock Adjustment & Discrepancy Monitoring
