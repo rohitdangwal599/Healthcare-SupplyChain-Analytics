@@ -1,0 +1,35 @@
+/* =====================================================================
+   HEALTHCARE SUPPLY CHAIN ANALYTICS - CORE DAX MEASURES
+   Domain: Clinical Inventory, Procurement Spend & Stock Discrepancies
+   ===================================================================== */
+
+Adjusted Increment Value = sum(Fact_Consumption[Adjusted Increment Value])
+
+Adjusted Reduction Value = sum(Fact_Consumption[Adjusted Reduction Value])
+
+Avg Inventory Value per SKU = DIVIDE([Total Stock Value],DISTINCTCOUNT(Dim_Product[Product Name]))
+
+consumption to stock ratio = DIVIDE([Total Consumption Value],[Total Stock Value])
+
+Invetory Turnover Ratio = DIVIDE([Total Consumption Value],[Total Stock Value])
+
+No of Categories = DISTINCTCOUNT(Dim_Product[Revised Catoegry])
+
+Products Purchased = DISTINCTCOUNT(Fact_Purchases[Product Name])
+
+Purchase Transactions = DISTINCTCOUNT(Fact_Purchases[Invoice No])
+
+stock value % of total = DIVIDE([Total Stock Value], CALCULATE([Total Stock Value],all(Dim_Product[Revised Catoegry])))
+
+Total Adjusted Value = [Adjusted Increment Value]+[Adjusted Reduction Value]
+
+Total Centers = DISTINCTCOUNT(Dim_Center[Organization])
+
+Total Consumption Value = sum(Fact_Consumption[Consumption Value])
+
+Total Products = DISTINCTCOUNT(Fact_Consumption[Product Name])
+
+Total Purchase Vaue = sum(Fact_Purchases[Purchase Value])
+
+Total Stock Value = sum(Fact_Consumption[Value of closing stock])
+
